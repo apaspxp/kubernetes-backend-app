@@ -15,6 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<spring-cloud-dependencies.version>2020.0.1</spring-cloud-dependencies.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -39,13 +40,17 @@
 		</dependency>
 	</dependencies>
 	
-	<repositories>
-    		<repository>
-         		<id>spring-milestones</id>
-         		<name>Spring Milestones</name>
-          		<url>https://repo.spring.io/milestone</url>
-    		</repository>
-	</repositories>
+    	<dependencyManagement>
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.springframework.cloud</groupId>
+                	<artifactId>spring-cloud-dependencies</artifactId>
+                	<version>${spring-cloud-dependencies.version}</version>
+                	<type>pom</type>
+                	<scope>import</scope>
+            	</dependency>
+        	</dependencies>
+    	</dependencyManagement>
 
 	<build>
 		<plugins>
