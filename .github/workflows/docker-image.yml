@@ -36,6 +36,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: apaspxp/github-actions-student-details-service:latest
+          tags: apaspxp/kubernetes-backend-app:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
