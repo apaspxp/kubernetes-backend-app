@@ -10,6 +10,7 @@ public class KubernetesBackendAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(KubernetesBackendAppApplication.class, args);
+
 	}
 
 }
